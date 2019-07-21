@@ -3,6 +3,7 @@ import { ConnectedSignupForm } from "../../components/Form";
 import { Image } from "../../components/image";
 import womanIcon from "../../assets/woman.svg";
 import styles from "./home.module.css";
+
 export const HomePage = () => {
   return (
     <div
