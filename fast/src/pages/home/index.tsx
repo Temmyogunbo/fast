@@ -12,7 +12,7 @@ export const HomePage = () => {
       <div className="row">
         <div className="col-md-6">
           <h1 className={` text-center text-md-left ${styles["one-click"]}`}>
-            One - click
+            One-click
             <br /> Signup, Login and pay
           </h1>
           <h3
@@ -29,7 +29,7 @@ export const HomePage = () => {
           <Image
             imageSource={womanIcon}
             alt="Fast one touch"
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
+            style={{ maxWidth: "100%", maxHeight: "100%", marginTop: '3rem' }}
           />
         </div>
       </div>
