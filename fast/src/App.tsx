@@ -6,6 +6,7 @@ import { createBrowserHistory } from "history";
 import { SiteHeader } from "./components/site-header";
 import store from "./redux/store";
 import { Provider } from "react-redux";
+import { SiteFooter } from './components/footer';
 
 const history = createBrowserHistory();
 
@@ -13,12 +14,13 @@ const App: React.FC = () => {
   return (
     <Provider store={store}>
       <Router history={history}>
+        {/* <div className="container"> */}
         <SiteHeader />
-        <div className="container">
           <Switch>
             <Route exact path="/" component={HomePage} />
           </Switch>
-        </div>
+          <SiteFooter />
+        {/* </div> */}
       </Router>
     </Provider>
   );

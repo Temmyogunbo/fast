@@ -38,23 +38,39 @@ export class SiteHeader extends React.Component {
           </form>
           <ul className="list-group">
             <li className={`list-group-item ${styles["list-group-item"]}`}>
-              Dapibus ac facilisis in
+              <Link to="/">Home</Link>
             </li>
 
-            <li className="list-group-item">
-              A simple primary list group item
+            <li className={`list-group-item ${styles["list-group-item"]}`}>
+              <Link
+                className="dropdown-toggle"
+                to="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Products
+              </Link>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <Link className="dropdown-item" to="#">
+                  Github
+                </Link>
+                <Link className="dropdown-item" to="#">
+                  Twitter
+                </Link>
+              </div>{" "}
             </li>
-            <li className="list-group-item">
-              A simple secondary list group item
+            <li className={`list-group-item ${styles["list-group-item"]}`}>
+              <Link to="/">About</Link>
             </li>
-            <li className="list-group-item">
-              A simple success list group item
+            <li className={`list-group-item ${styles["list-group-item"]}`}>
+              <Link to="/">Developers</Link>
             </li>
-            <li className="list-group-item">A simple danger list group item</li>
-            <li className="list-group-item">
-              A simple warning list group item
+            <li className={`list-group-item ${styles["list-group-item"]}`}>
+              <Link to="/">Help Centers</Link>
             </li>
-            <li className="list-group-item">A simple info list group item</li>
           </ul>
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
