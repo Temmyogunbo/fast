@@ -1,0 +1,18 @@
+.list-mobile {
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: 5;
+  position: fixed;
+  width: 242px;
+
+  background: #88d20f;
+  box-shadow: 0px -4px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.list-group-item {
+  background-color: transparent;
+  border: 0;
+  margin-bottom: 70px;
+}

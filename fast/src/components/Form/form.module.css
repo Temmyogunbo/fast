@@ -1,0 +1,6 @@
+.email-input {
+  border-left: 0;
+}
+.email-input:focus {
+  box-shadow: none;
+}

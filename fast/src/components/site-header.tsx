@@ -1,30 +1,67 @@
 import React from "react";
 import { Image } from "./image";
-import fastLogo from '../assets/fastlogo.png';
+import fastLogo from "../assets/fastlogo.png";
 import { Link } from "react-router-dom";
+import hamburger from "../assets/hamburger.svg";
+import styles from "./site-header.module.css";
+import closeIcon from "../assets/close-icon.svg";
 
 export class SiteHeader extends React.Component {
-
   render() {
     return (
-      <nav className="navbar navbar-expand-lg" style={{backgroundColor: '#88D20F'}}>
+      <nav
+        className="navbar navbar-expand-lg"
+        style={{ backgroundColor: "#88D20F" }}
+      >
         <Link className="navbar-brand" to="#">
           <Image imageSource={fastLogo} />
         </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
 
+        <div
+          className={`collapse ${styles["list-mobile"]}`}
+          id="navbarToggleExternalContent"
+        >
+          <form className="form-inline my-2 my-lg-0 d-flex justify-content-between">
+            <button
+              className="btn btn-outline-success my-2 my-sm-0"
+              type="submit"
+            >
+              Get Started
+            </button>
+            <Image
+              className="navbar-toggler"
+              data-toggle="collapse"
+              aria-expanded="true"
+              data-target="#navbarToggleExternalContent"
+              imageSource={closeIcon}
+            />
+          </form>
+          <ul className="list-group">
+            <li className={`list-group-item ${styles["list-group-item"]}`}>
+              Dapibus ac facilisis in
+            </li>
+
+            <li className="list-group-item">
+              A simple primary list group item
+            </li>
+            <li className="list-group-item">
+              A simple secondary list group item
+            </li>
+            <li className="list-group-item">
+              A simple success list group item
+            </li>
+            <li className="list-group-item">A simple danger list group item</li>
+            <li className="list-group-item">
+              A simple warning list group item
+            </li>
+            <li className="list-group-item">A simple info list group item</li>
+          </ul>
+        </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
+          <ul
+            className="navbar-nav mr-auto align-items-center d-flex justify-content-around"
+            style={{ width: "100%" }}
+          >
             <li className="nav-item active">
               <Link to="/">Home</Link>
             </li>
@@ -58,12 +95,35 @@ export class SiteHeader extends React.Component {
             <li className="nav-item ">
               <Link to="/">Help Centers</Link>
             </li>
-            <button className="btn btn-outline-success" type="button">
-              Get Started
-            </button>
           </ul>
         </div>
+        <form className="form-inline my-2 my-lg-0">
+          <button
+            className="btn btn-outline-success my-2 my-sm-0"
+            type="submit"
+          >
+            Get Started
+          </button>
+        </form>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarToggleExternalContent"
+          aria-controls="navbarToggleExternalContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <Image imageSource={hamburger} />
+        </button>
       </nav>
     );
   }
 }
+
+// interface IListItemsProps extends React.HTMLProps<any> {
+//   items: any[];
+// }
+// export const ListItems: React.SFC<IListItemsProps> = ({items, ...rest}) => {
+//   return items.map((item: string) => (<li {...rest}>{item}</li>))
+// }

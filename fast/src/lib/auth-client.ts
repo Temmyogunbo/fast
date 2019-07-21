@@ -11,7 +11,6 @@ export class AuthClient {
     slug: string,
     params: Object
   ) => {
-    console.log('request', method, slug, params)
     return new Promise(async (resolve, reject) => {
       (axios[method] as Function)(`${slug}`, params)
         .then((response: any) => {
@@ -25,7 +24,6 @@ export class AuthClient {
   }
 
   signupWithoutPassword = (params: AuthSignupWithoutPasswordParams) => {
-    console.log(this)
     return this.request("post", "/users", params);
   }
 }
